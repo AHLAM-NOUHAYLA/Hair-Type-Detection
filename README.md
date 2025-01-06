@@ -1,5 +1,8 @@
 # Hair-Type-Detection
 
+Créé par Ahlam EL ASRI et Nouhayla EL-BIYAALI - Université Paris-Est Créteil (UPEC)
+
+
 Le Deep Learning a transformé notre approche des problèmes complexes en permettant aux machines d'apprendre à partir des données. Ce projet Hair Type Detection exploite la puissance des réseaux de neurones convolutifs pour identifier automatiquement le type de cheveux à partir d'une image, parmi des catégories telles que Straight, Wavy, Curly, Dreadlocks et Kinky. Cette technologie trouve des applications dans les recommandations de soins capillaires personnalisés et les expériences interactives en beauté et mode.
 
 ## Table des matières
