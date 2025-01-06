@@ -45,9 +45,28 @@ Cette étape garantit que les données sont correctement chargées et prêtes po
 ## 3. Préparation des données
 
 ###   a. Prétraitement des images
+La préparation des données est une étape clé dans tout projet de Deep Learning, car la qualité des données a un impact direct sur les performances du modèle. Dans ce projet, les images sont tout d’abord redimensionnées à une taille standard pour assurer une cohérence entre les entrées du réseau de neurones. Ensuite, les images sont normalisées, c'est-à-dire que les valeurs des pixels sont mises à l’échelle entre 0 et 1, ce qui facilite l’optimisation du modèle en réduisant l’effet des grandes variations d’intensité.
+
 ###   b. Data augmentation
+Dans le but d’équilibrer les classes et d’améliorer la robustesse du modèle, une augmentation des données a été appliquée. Les images disponibles ne présentaient pas une distribution uniforme entre les différentes catégories de cheveux, ce qui aurait pu biaiser les prédictions du modèle. Pour remédier à cela, plusieurs techniques d’augmentation ont été utilisées, notamment :
+
+- Rotation aléatoire pour introduire des variations d'angle.
+- Zoom aléatoire afin de simuler différentes perspectives.
+- Renversement horizontal pour augmenter la diversité des échantillons.
+- Modification de la luminosité et du contraste afin d'adapter le modèle à différentes conditions d'éclairage.
+- Décalage des couleurs pour rendre le modèle plus robuste aux variations de teinte.
+  
+Ces transformations ont été appliquées de manière aléatoire aux images afin d'améliorer la capacité du modèle à généraliser sur des données inconnues.
+
 ###   c. Conversion des images en format JPG
+Enfin, une conversion des images a été effectuée pour assurer l'uniformité du format des fichiers. Toutes les images ont été converties en format JPG, garantissant ainsi une compatibilité optimale avec les outils de traitement et évitant tout problème lors du chargement des données.
+
 ###   d. Division des donnée
+Pour s’assurer d’un bon entraînement et d’une évaluation fiable, les données ont ensuite été divisées en trois ensembles :
+
+- Ensemble d'entraînement, utilisé pour apprendre les caractéristiques des images.
+- Ensemble de validation, utilisé pour ajuster les hyperparamètres du modèle.
+- Ensemble de test, utilisé pour évaluer la performance finale du modèle sur des données inédites.
 
 ## 4. Modèlisation
 
