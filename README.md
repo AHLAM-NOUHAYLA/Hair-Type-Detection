@@ -18,4 +18,4 @@ Le Deep Learning a révolutionné notre façon d'aborder les problèmes complexe
 
 ## Prérequis
 
-## Installation
+## Installation.
