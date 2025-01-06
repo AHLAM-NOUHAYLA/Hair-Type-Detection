@@ -73,8 +73,10 @@ Le modèle model_mobilenet.h5 doit être importé depuis Google Drive ou directe
    
    - Lancer la commande suivante dans une cellule Colab pour démarrer l'application Streamlit : !streamlit run app.py & npx localtunnel --port 8501
    - Cela génère une URL qui permet d’accéder à l'application depuis le web.
-   - Accéder à l'interface utilisateur :
-   - Une fois l'URL générée, cliquer sur le lien pour accéder à l'application de détection du type de cheveux.
+
+4. Accéder à l'interface utilisateur :
+   
+Une fois l'URL générée, cliquer sur le lien pour accéder à l'application de détection du type de cheveux.
 
 
 ## Améliorations possibles
