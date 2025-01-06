@@ -7,14 +7,18 @@ Le Deep Learning a transformé notre approche des problèmes complexes en permet
 1. [Importation des bibliothèques](#importation-des-bibliothèques)
 2. [Montage du drive et chargement des données](#montage-du-drive-et-chargement-des-données)
 3. [Préparation des données](#préparation-des-données)
-4. [Modèlisation](#modèlisation)
-5. [Entraînement du modèle](#entraînement-du-modèle)
-6. [Evaluation](#evaluation)
-7. [Test sur de nouvelles images](#test-sur-de-nouvelles-images)
-8. [Déploiement](#déploiement)
-9. [Conclusion](#conclusion)
 
-## Importation des bibliothèques
+   a. [Data augmentation](#data-augmentation)
+
+   
+5. [Modèlisation](#modèlisation)
+6. [Entraînement du modèle](#entraînement-du-modèle)
+7. [Evaluation](#evaluation)
+8. [Test sur de nouvelles images](#test-sur-de-nouvelles-images)
+9. [Déploiement](#déploiement)
+10. [Conclusion](#conclusion)
+
+## 1. Importation des bibliothèques
 
 L'importation des bibliothèques nécessaires est une étape cruciale pour mettre en place un environnement complet de Deep Learning. Dans ce projet, plusieurs bibliothèques ont été utilisées pour accomplir différentes tâches :
 
@@ -26,7 +30,7 @@ L'importation des bibliothèques nécessaires est une étape cruciale pour mettr
 - Des callbacks comme EarlyStopping et ReduceLROnPlateau sont intégrés pour optimiser l’entraînement et éviter le sur-apprentissage.
 
 
-## Montage du drive et chargement des données
+## 2. Montage du drive et chargement des données
 
 Dans ce projet, l'environnement de travail est Google Colab, une plateforme qui offre des ressources GPU/TPU pour l'exécution rapide de modèles d'apprentissage profond. Les données utilisées pour entraîner le modèle sont stockées sur Google Drive.
 
@@ -36,18 +40,20 @@ Après le montage, le dossier contenant les données d'images est spécifié par
 
 Cette étape garantit que les données sont correctement chargées et prêtes pour la phase de préparation et d'entraînement du modèle.
 
-## Préparation des données
+## 3. Préparation des données
 
-## Modèlisation
+####   a. Data augmentation
 
-## Entraînement du modèle
+## 4. Modèlisation
 
-## Evaluation
+## 5. Entraînement du modèle
 
-## Test sur de nouvelles images
+## 6. Evaluation
 
-## Déploiement
+## 7. Test sur de nouvelles images
 
-## Conclusion
+## 8. Déploiement
+
+## 9. Conclusion
 
 
