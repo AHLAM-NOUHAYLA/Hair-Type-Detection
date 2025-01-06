@@ -64,9 +64,9 @@ Enfin, une conversion des images a été effectuée pour assurer l'uniformité d
 ###   d. Division des donnée
 Pour s’assurer d’un bon entraînement et d’une évaluation fiable, les données ont ensuite été divisées en trois ensembles :
 
-- Ensemble d'entraînement, utilisé pour apprendre les caractéristiques des images.
-- Ensemble de validation, utilisé pour ajuster les hyperparamètres du modèle.
-- Ensemble de test, utilisé pour évaluer la performance finale du modèle sur des données inédites.
+- Ensemble d'entraînement, utilisé pour apprendre les caractéristiques des images. (80%)
+- Ensemble de validation, utilisé pour ajuster les hyperparamètres du modèle.(10%)
+- Ensemble de test, utilisé pour évaluer la performance finale du modèle sur des données inédites.(10%)
 
 ## 4. Modèlisation
 
