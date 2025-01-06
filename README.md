@@ -28,6 +28,14 @@ L'importation des bibliothèques nécessaires est une étape cruciale pour mettr
 
 ## Montage du drive et chargement des données
 
+Dans ce projet, l'environnement de travail est Google Colab, une plateforme qui offre des ressources GPU/TPU pour l'exécution rapide de modèles d'apprentissage profond. Les données utilisées pour entraîner le modèle sont stockées sur Google Drive.
+
+L'étape de montage du Drive est indispensable pour accéder aux fichiers directement à partir de l'espace de stockage personnel. Cette opération se fait via la commande drive.mount(), qui permet de connecter le Drive à l'environnement Colab.
+
+Après le montage, le dossier contenant les données d'images est spécifié par le chemin data_dir, et les classes de données (par exemple, 'Wavy', 'Curly', 'Dreadlocks', 'Straight', 'Kinky') sont automatiquement listées en utilisant os.listdir(). Une fonction visualize_images est également mise en place pour afficher quelques images représentatives de chaque classe afin de vérifier l’intégrité des données et mieux visualiser la distribution des images.
+
+Cette étape garantit que les données sont correctement chargées et prêtes pour la phase de préparation et d'entraînement du modèle.
+
 ## Préparation des données
 
 ## Modèlisation
