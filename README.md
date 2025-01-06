@@ -9,21 +9,12 @@ Ce projet propose une application web interactive pour la *détection du type de
 
 ## Table des matières
 
-1. [Importation des bibliothèques](#importation-des-bibliothèques)
-2. [Montage du drive et chargement des données](#montage-du-drive-et-chargement-des-données)
-3. [Préparation des données](#préparation-des-données)
-
-   a. [Prétraitement des images](#prétraitement-des-images)
-   b. [Data augmentation](#data-augmentation)
-   c. [Conversion des images en format JPG](#conversion-des-images-en-format-JPG)
-   b. [Division des données](#division-des-données) 
-   
-5. [Modèlisation](#modèlisation)
-6. [Entraînement du modèle](#entraînement-du-modèle)
-7. [Evaluation](#evaluation)
-8. [Test sur de nouvelles images](#test-sur-de-nouvelles-images)
-9. [Déploiement](#déploiement)
-10. [Conclusion](#conclusion)
+1. [Description du Projet](#description-du-projet)
+2. [Prérequis](#prérequis)
+3. [Jeux de données](#jeux-de-données)
+4. [Structure du Projet](#structure-du-projet)
+5. [Déploiement](#déploiement)
+6. [Améliorations possibles](#améliorations-possibles)
 
 ## Prérequis
 
