@@ -25,53 +25,65 @@ Ce projet propose une application web interactive pour la *détection du type de
 9. [Déploiement](#déploiement)
 10. [Conclusion](#conclusion)
 
-## 1. Importation des bibliothèques
+## Prérequis
 
-L'importation des bibliothèques nécessaires est une étape cruciale pour mettre en place un environnement complet de Deep Learning. Dans ce projet, plusieurs bibliothèques ont été utilisées pour accomplir différentes tâches :
+Pour exécuter ce projet, assurez-vous d'avoir :
 
-- Matplotlib et Seaborn sont utilisées pour visualiser les résultats, notamment les courbes de performance et les matrices de confusion.
-- PIL et shutil permettent de gérer et manipuler les images.
-- TensorFlow/Keras fournit l'architecture principale pour la création, l'entraînement et le déploiement du modèle avec des modules comme MobileNetV2, Dense, et Dropout.
-- Scikit-learn offre des fonctions pour la division des données (train_test_split) et l'évaluation des métriques comme la matrice de confusion, le F1-score et le ROC-AUC.
-- Google Colab permet de monter le Google Drive et de charger des fichiers directement à partir du stockage en ligne, facilitant ainsi le travail collaboratif.
-- Des callbacks comme EarlyStopping et ReduceLROnPlateau sont intégrés pour optimiser l’entraînement et éviter le sur-apprentissage.
-
-
-## 2. Montage du drive et chargement des données
-
-Dans ce projet, l'environnement de travail est Google Colab, une plateforme qui offre des ressources GPU/TPU pour l'exécution rapide de modèles d'apprentissage profond. Les données utilisées pour entraîner le modèle sont stockées sur Google Drive.
-
-L'étape de montage du Drive est indispensable pour accéder aux fichiers directement à partir de l'espace de stockage personnel. Cette opération se fait via la commande drive.mount(), qui permet de connecter le Drive à l'environnement Colab.
-
-Après le montage, le dossier contenant les données d'images est spécifié par le chemin data_dir, et les classes de données (par exemple, 'Wavy', 'Curly', 'Dreadlocks', 'Straight', 'Kinky') sont automatiquement listées en utilisant os.listdir(). Une fonction visualize_images est également mise en place pour afficher quelques images représentatives de chaque classe afin de vérifier l’intégrité des données et mieux visualiser la distribution des images.
-
-Cette étape garantit que les données sont correctement chargées et prêtes pour la phase de préparation et d'entraînement du modèle.
-
-## 3. Préparation des données
-
-###   a. Prétraitement des images
-La préparation des données est une étape clé dans tout projet de Deep Learning, car la qualité des données a un impact direct sur les performances du modèle. Dans ce projet, les images sont tout d’abord redimensionnées à une taille standard pour assurer une cohérence entre les entrées du réseau de neurones. Ensuite, les images sont normalisées, c'est-à-dire que les valeurs des pixels sont mises à l’échelle entre 0 et 1, ce qui facilite l’optimisation du modèle en réduisant l’effet des grandes variations d’intensité.
-
-###   b. Data augmentation
-Dans le but d’équilibrer les classes et d’améliorer la robustesse du modèle, une augmentation des données a été appliquée. Les images disponibles ne présentaient pas une distribution uniforme entre les différentes catégories de cheveux, ce qui aurait pu biaiser les prédictions du modèle. Pour remédier à cela, plusieurs techniques d’augmentation ont été utilisées, notamment :
-
-- Rotation aléatoire pour introduire des variations d'angle.
-- Zoom aléatoire afin de simuler différentes perspectives.
-- Renversement horizontal pour augmenter la diversité des échantillons.
-- Modification de la luminosité et du contraste afin d'adapter le modèle à différentes conditions d'éclairage.
-- Décalage des couleurs pour rendre le modèle plus robuste aux variations de teinte.
+- Python 3.x : Langage de programmation utilisé pour le projet.
+- Streamlit : Framework pour créer une interface utilisateur web interactive.
+- TensorFlow & Keras : Bibliothèques pour charger le modèle de deep learning MobileNetV2 et effectuer des prédictions.
+- MobileNetV2 pré-entraîné : Modèle de classification des images utilisé pour détecter le type de cheveux.
+- Jeu de données classifié : Ensemble d'images annotées avec les classes Straight, Wavy, Curly, Dreadlocks, Kinky.
+- Ngrok ou Localtunnel (optionnel) : Outils pour exposer l'application localement et obtenir une URL publique.
+- Google Drive (optionnel) : Si vous utilisez Google Colab, montez votre Drive pour charger le modèle pré-enregistré.
   
-Ces transformations ont été appliquées de manière aléatoire aux images afin d'améliorer la capacité du modèle à généraliser sur des données inconnues.
+Ces outils assurent un environnement complet pour exécuter l'application en local ou via Google Colab.
 
-###   c. Conversion des images en format JPG
-Enfin, une conversion des images a été effectuée pour assurer l'uniformité du format des fichiers. Toutes les images ont été converties en format JPG, garantissant ainsi une compatibilité optimale avec les outils de traitement et évitant tout problème lors du chargement des données.
+## Jeux de données
 
-###   d. Division des donnée
-Pour s’assurer d’un bon entraînement et d’une évaluation fiable, les données ont ensuite été divisées en trois ensembles :
+Les données utilisées pour ce projet proviennent du dataset public disponible sur Kaggle : Hair Type Dataset (https://www.kaggle.com/datasets/kavyasreeb/hair-type-dataset).
 
-- Ensemble d'entraînement, utilisé pour apprendre les caractéristiques des images. (80%)
-- Ensemble de validation, utilisé pour ajuster les hyperparamètres du modèle.(10%)
-- Ensemble de test, utilisé pour évaluer la performance finale du modèle sur des données inédites.(10%)
+Ce jeu de données contient des images annotées selon cinq types de cheveux différents :
+
+- Straight
+- Wavy
+- Curly
+- Dreadlocks
+- Kinky
+  
+Les données ont été téléchargées depuis Kaggle et pré-traitées pour être utilisées dans le modèle MobileNetV2.
+
+Cette partie est un élément clé du projet pour entraîner et tester les performances du modèle sur des classes bien définies.
+
+##  Structure du Projet
+
+Le projet est organisé selon la structure suivante :
+
+- Hair_Type_Detection.ipynb : Notebook pour traitement des données,entraînement du modèle et l'analyse des résultats.
+- App_execution_streamlit.ipynb : Contient le notebook permettant d'exécuter et de tester l'application web Streamlit.
+- README.md : Document de présentation du projet avec les instructions d'utilisation.
+- app.py : Script contenant le code de l'application Streamlit pour la classification des types de cheveux.
+- model_mobilenet.h5 : Fichier contenant le modèle MobileNetV2 sauvegardé après l'entraînement.
+- test projet : Une base de données contenant des nouvelles images non vues auparavant .
+
+##  Déploiement
+
+Le déploiement de l'application Streamlit se fait via Google Colab en utilisant les étapes suivantes :
+
+1. Lancer le notebook d'exécution :
+     a. ouvrir le fichier App_execution_streamlit.ipynb dans Google Colab.
+     b. S'assurer que les bibliothèques nécessaires sont installées (streamlit, pyngrok, localtunnel, tensorflow, etc.).
+
+2. Montage du modèle pré-entraîné :
+   
+Le modèle model_mobilenet.h5 doit être importé depuis Google Drive ou directement dans l'environnement d'exécution.
+
+3. Exécution de l'application :
+
+     a. Lancer la commande suivante dans une cellule Colab pour démarrer l'application Streamlit : !streamlit run app.py & npx localtunnel --port 8501
+     b. Cela génère une URL qui permet d’accéder à l'application depuis le web.
+     c. Accéder à l'interface utilisateur :
+     d. Une fois l'URL générée, cliquer sur le lien pour accéder à l'application de détection du type de cheveux.
 
 ## 4. Modèlisation
 
