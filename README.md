@@ -62,30 +62,46 @@ Le projet est organisé selon la structure suivante :
 Le déploiement de l'application Streamlit se fait via Google Colab en utilisant les étapes suivantes :
 
 1. Lancer le notebook d'exécution :
-     a. ouvrir le fichier App_execution_streamlit.ipynb dans Google Colab.
-     b. S'assurer que les bibliothèques nécessaires sont installées (streamlit, pyngrok, localtunnel, tensorflow, etc.).
-
-2. Montage du modèle pré-entraîné :
    
+   a. ouvrir le fichier App_execution_streamlit.ipynb dans Google Colab.
+   b. S'assurer que les bibliothèques nécessaires sont installées (streamlit, pyngrok, localtunnel, tensorflow, etc.).
+
+3. Montage du modèle pré-entraîné :
+
 Le modèle model_mobilenet.h5 doit être importé depuis Google Drive ou directement dans l'environnement d'exécution.
 
 3. Exécution de l'application :
+   
+   a. Lancer la commande suivante dans une cellule Colab pour démarrer l'application Streamlit : !streamlit run app.py & npx localtunnel --port 8501
+   b. Cela génère une URL qui permet d’accéder à l'application depuis le web.
+   c. Accéder à l'interface utilisateur :
+   d. Une fois l'URL générée, cliquer sur le lien pour accéder à l'application de détection du type de cheveux.
 
-     a. Lancer la commande suivante dans une cellule Colab pour démarrer l'application Streamlit : !streamlit run app.py & npx localtunnel --port 8501
-     b. Cela génère une URL qui permet d’accéder à l'application depuis le web.
-     c. Accéder à l'interface utilisateur :
-     d. Une fois l'URL générée, cliquer sur le lien pour accéder à l'application de détection du type de cheveux.
 
-## 4. Modèlisation
+## Améliorations possibles
 
-## 5. Entraînement du modèle
+- Optimisation des performances du modèle :
+  
+Entraîner le modèle sur un dataset plus volumineux ou utiliser un transfert d'apprentissage plus avancé pour améliorer la précision.
 
-## 6. Evaluation
+- Prise en charge de différents formats d'images :
+  
+Ajouter la compatibilité avec d'autres formats d'image comme .bmp, .tiff, etc.
 
-## 7. Test sur de nouvelles images
+- Amélioration de l'interface utilisateur :
+  
+Ajouter des options comme le choix du modèle à utiliser ou des statistiques en direct sur la prédiction.
 
-## 8. Déploiement
+Gestion des erreurs :
 
-## 9. Conclusion
+Implémenter une meilleure gestion des erreurs pour informer l'utilisateur lorsque le fichier image est incorrect ou si une image corrompue est uploadée.
+
+- Optimisation de la latence :
+  
+Réduire le temps de chargement des prédictions en utilisant des techniques de quantification du modèle pour un calcul plus rapide.
+
+- Collecte de données supplémentaires :
+  
+Intégrer des options pour collecter de nouvelles données d'images (avec l'autorisation des utilisateurs) pour enrichir le jeu de données et entraîner un modèle encore plus précis.
 
 
