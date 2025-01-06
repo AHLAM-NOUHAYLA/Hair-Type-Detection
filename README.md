@@ -8,8 +8,10 @@ Le Deep Learning a transformé notre approche des problèmes complexes en permet
 2. [Montage du drive et chargement des données](#montage-du-drive-et-chargement-des-données)
 3. [Préparation des données](#préparation-des-données)
 
-   a. [Data augmentation](#data-augmentation)
-
+   a. [Prétraitement des images](#prétraitement-des-images)
+   b. [Data augmentation](#data-augmentation)
+   c. [Conversion des images en format JPG](#conversion-des-images-en-format-JPG)
+   b. [Division des données](#division-des-données) 
    
 5. [Modèlisation](#modèlisation)
 6. [Entraînement du modèle](#entraînement-du-modèle)
@@ -42,7 +44,10 @@ Cette étape garantit que les données sont correctement chargées et prêtes po
 
 ## 3. Préparation des données
 
-###   a. Data augmentation
+###   a. Prétraitement des images
+###   b. Data augmentation
+###   c. Conversion des images en format JPG
+###   d. Division des donnée
 
 ## 4. Modèlisation
 
