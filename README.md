@@ -42,7 +42,7 @@ Cette étape garantit que les données sont correctement chargées et prêtes po
 
 ## 3. Préparation des données
 
-####   a. Data augmentation
+###   a. Data augmentation
 
 ## 4. Modèlisation
 
