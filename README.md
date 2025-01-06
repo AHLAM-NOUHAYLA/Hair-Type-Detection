@@ -62,9 +62,8 @@ Le projet est organisé selon la structure suivante :
 Le déploiement de l'application Streamlit se fait via Google Colab en utilisant les étapes suivantes :
 
 1. Lancer le notebook d'exécution :
-   
-   a. ouvrir le fichier App_execution_streamlit.ipynb dans Google Colab.
-   b. S'assurer que les bibliothèques nécessaires sont installées (streamlit, pyngrok, localtunnel, tensorflow, etc.).
+    - Ouvrir le fichier App_execution_streamlit.ipynb dans Google Colab.
+    - S'assurer que les bibliothèques nécessaires sont installées (streamlit, pyngrok, localtunnel, tensorflow, etc.).
 
 3. Montage du modèle pré-entraîné :
 
@@ -72,10 +71,10 @@ Le modèle model_mobilenet.h5 doit être importé depuis Google Drive ou directe
 
 3. Exécution de l'application :
    
-   a. Lancer la commande suivante dans une cellule Colab pour démarrer l'application Streamlit : !streamlit run app.py & npx localtunnel --port 8501
-   b. Cela génère une URL qui permet d’accéder à l'application depuis le web.
-   c. Accéder à l'interface utilisateur :
-   d. Une fois l'URL générée, cliquer sur le lien pour accéder à l'application de détection du type de cheveux.
+   - Lancer la commande suivante dans une cellule Colab pour démarrer l'application Streamlit : !streamlit run app.py & npx localtunnel --port 8501
+   - Cela génère une URL qui permet d’accéder à l'application depuis le web.
+   - Accéder à l'interface utilisateur :
+   - Une fois l'URL générée, cliquer sur le lien pour accéder à l'application de détection du type de cheveux.
 
 
 ## Améliorations possibles
@@ -92,7 +91,7 @@ Ajouter la compatibilité avec d'autres formats d'image comme .bmp, .tiff, etc.
   
 Ajouter des options comme le choix du modèle à utiliser ou des statistiques en direct sur la prédiction.
 
-Gestion des erreurs :
+- Gestion des erreurs :
 
 Implémenter une meilleure gestion des erreurs pour informer l'utilisateur lorsque le fichier image est incorrect ou si une image corrompue est uploadée.
 
@@ -100,8 +99,5 @@ Implémenter une meilleure gestion des erreurs pour informer l'utilisateur lorsq
   
 Réduire le temps de chargement des prédictions en utilisant des techniques de quantification du modèle pour un calcul plus rapide.
 
-- Collecte de données supplémentaires :
-  
-Intégrer des options pour collecter de nouvelles données d'images (avec l'autorisation des utilisateurs) pour enrichir le jeu de données et entraîner un modèle encore plus précis.
 
 
