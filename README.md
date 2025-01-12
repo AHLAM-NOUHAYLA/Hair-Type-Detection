@@ -91,7 +91,7 @@ Ajouter la compatibilité avec d'autres formats d'image comme .bmp, .tiff, etc.
 
 - Amélioration de l'interface utilisateur :
   
-Ajouter des options comme le choix du modèle à utiliser ou des statistiques en direct sur la prédiction.
+Ajouter des options comme l'affichage des statistiques en direct sur la prédiction.
 
 - Gestion des erreurs :
 
